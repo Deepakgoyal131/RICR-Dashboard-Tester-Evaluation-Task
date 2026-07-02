@@ -6,6 +6,7 @@ const validUser = {
   password: "Test@123",
 };
 
+// Test Suite For Login Page Using POM
 test.describe("Login Page - Page Object Model", () => {
 
     // Test 1 : Page loads correctly

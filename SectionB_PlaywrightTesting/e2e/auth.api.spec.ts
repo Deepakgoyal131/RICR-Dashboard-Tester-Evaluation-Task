@@ -1,5 +1,6 @@
 import { test, expect } from '@playwright/test';
 
+// Valid Test User name
 const testUser = {
     userName: "Deepak Test",
     email: `deepak${Date.now()}@test.com`, // Unique email for every run
@@ -7,6 +8,7 @@ const testUser = {
     userType: 1,
 };
 
+// Test Suite For Test Authentication API
 test.describe("Authentication API Tests", () => {
 
     // Test 1 : Register -> Success 

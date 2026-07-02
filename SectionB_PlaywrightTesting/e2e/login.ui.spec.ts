@@ -5,6 +5,7 @@ const validUser = {
     password: "Test@123",
 };
 
+// Test Suite for Login UI
 test.describe("Login Page UI Tests", () => {
 
     //  Define Locaters 
@@ -17,7 +18,7 @@ test.describe("Login Page UI Tests", () => {
     const getLoginButton = (page: any) =>
         page.getByRole("button", { name: /login/i }).or(page.getByRole("button", { name: /sign in/i }));
 
-    // Test 9 : Page loads correctly
+    // Test 1 : Page loads correctly
     test("Page loads with email, password and login button", async ({page}) => {
         await page.goto("http://localhost:5173/");
 
@@ -26,7 +27,7 @@ test.describe("Login Page UI Tests", () => {
         await expect(getLoginButton(page)).toBeVisible();
     });
 
-    // Test 10 : Successful Login
+    // Test 2 : Successful Login
     test("User can login successfully", async ({ page }) => {
         await page.goto("http://localhost:5173/");
 
@@ -37,7 +38,7 @@ test.describe("Login Page UI Tests", () => {
         await expect(page).toHaveURL(/dashboard/);
     });
 
-    // Test 11 : Invalid Login
+    // Test 3 : Invalid Login
     test("Display error message for invalid credentials", async ({page}) => {
         await page.goto("http://localhost:5173/");
 
@@ -51,7 +52,7 @@ test.describe("Login Page UI Tests", () => {
     });
 
 
-    // Test 12 : Empty Form Validation
+    // Test 4 : Empty Form Validation
     test("Should not login with empty form", async ({ page }) => {
         await page.goto("http://localhost:5173/");
 
@@ -70,7 +71,7 @@ test.describe("Login Page UI Tests", () => {
         await expect(page).not.toHaveURL(/dashboard/);
     });
 
-    // Test 13 : Loading State
+    // Test 5 : Loading State
     test("Login button shows loading state while request is in progress", async ({page}) => {
         await page.goto("http://localhost:5173/");
 
