@@ -27,8 +27,8 @@ describe("callerService.getCallerById()", () => {
   // Mock caller object used across multiple test cases.
   const mockCaller = {
     id: 1,
-    name: "John Doe",
-    email: "john@example.com",
+    name: "Deepak Goyal",
+    email: "deepak@example.com",
     phone: "9876543210",
     roleId: 2,
     isActive: true,
